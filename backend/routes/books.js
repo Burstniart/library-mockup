@@ -17,8 +17,8 @@ router.get('/', async (req, res) => {
 // POST Method to receive data
 router.post('/', async (req, res) => {
     const { title, author, isbn } = req.body; // take input, which should have the model structure we defined
-//    const imagePath = '/uploads/' + req.file.filename;
-    const newBook = new Book({title, author, isbn}); // Create a new object from the schema we defined
+    const imagePath = '/uploads/' + req.file.filename;
+    const newBook = new Book({title, author, isbn, imagePath}); // Create a new object from the schema we defined
     console.log(newBook);
     await newBook.save();
     // res.send('Aye aye capitain! Received!');

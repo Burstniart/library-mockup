@@ -25,11 +25,11 @@ app.use(morgan('dev'));
 const storage = multer.diskStorage({ // configuration
     destination: path.join(__dirname,  'public/uploads'), // where to store images/ directory can be created i.e. doesn't need to an empty dir
     filename(req, file, cb) { // req is petition info, file is the file info and cb a function to be executed
-	cb(null, new Date.getTime() + path.extname(file.originalname)); // the file name will be the time plus the file extensino name, taken from the uploaded file
+	cb(null, new Date().getTime() + path.extname(file.originalname)); // the file name will be the time plus the file extensino name, taken from the uploaded file
     }
-});
+})
 
-app.use(multer({ storage }).single("image")); // handles just one parameter aka 1 image at a time
+app.use(multer({storage}).single("image")); // handles just one parameter aka 1 image at a time
 app.use(express.urlencoded({extended: false})); // enables the use a form from frontedn as a json
 app.use(express.json()); // hmmm json
 
