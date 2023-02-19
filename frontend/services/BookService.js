@@ -20,7 +20,7 @@ class BookService {
 	    body: book
 	});
 	const data = await res.json();
-	console.log(data);
+	console.log(data); // return the api response message AKA "Aye Aye Captain" or something like that
     }
 
     async deleteBook(bookId) {

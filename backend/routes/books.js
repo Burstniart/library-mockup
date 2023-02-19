@@ -2,6 +2,8 @@
 
 const { Router } = require('express');
 const router = Router();
+const { unlink } = require('fs-extra');
+const path = require('path');
 
 // Add acces to our data model
 const Book = require('../models/Book');
@@ -29,6 +31,7 @@ router.post('/', async (req, res) => {
 // ':id' tells the api that the direction being passed contains an id, which we can use
 router.delete('/:id', async (req, res) => {
     const book = await Book.findByIdAndDelete(req.params.id); // pass the element id to delete
+    unlink(path.resolve('./backend/public' + book.imagePath));
     console.log(book);
     res.json({message:"Now it's sleeping with the fish boss."});
 })

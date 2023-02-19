@@ -158,3 +158,19 @@ To solve this, go to backend/index.js, our server file, and let's use that cors 
 Reconfigure
 
 // As of this point the app is working properly, will do a commit in case image saving to local folder does not work properly, already had a bad night sleep trying to figure this thing up and finally got it to work again.
+
+// Turns out I was just missing parenthesis in the date object "Date()"...
+// Also not sure what I fixed but image route has been saved succesfully inside the DB so... yay.
+
+UI.js
+
+Time to create the interface.
+Since we have the functionality in the BookService.js file we'll implement it in UI.js
+
+Capturing the DOM event for whenever the delete button created through the getBook service and renderbook function from UI is clicked to deelete that record.
+For whatever reasone we create a new UI class everytime we need to do something.
+
+To also delete files while deleteing records from the db go to the routes file and use the imagePath variable to delete the file. Here we use the module FS-extra which is a better version of file system "fs", we use the unlink method to delete the file and path module to resolve the direction, which we saved as previously shown in the record model.
+
+
+
