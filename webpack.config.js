@@ -14,7 +14,8 @@ module.exports = {
 	path: path.join(__dirname, 'backend/public'), // location
 	filename: 'js/bundle.js' //new file name
     },
-    mode:'development',
+//    mode:'development',
+      mode:'production',
     
     // css configuration
     module: {

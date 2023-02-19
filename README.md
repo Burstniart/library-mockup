@@ -172,5 +172,5 @@ For whatever reasone we create a new UI class everytime we need to do something.
 
 To also delete files while deleteing records from the db go to the routes file and use the imagePath variable to delete the file. Here we use the module FS-extra which is a better version of file system "fs", we use the unlink method to delete the file and path module to resolve the direction, which we saved as previously shown in the record model.
 
-
+To prevent webpack from acting up whenever we do something the webpack config file has a mode variable, now we switch that variable to production cause we set webpack to only bundle files whenever mode is production and not development, which was the value we;ve been working with this whole time.
 
