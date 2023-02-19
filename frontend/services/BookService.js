@@ -2,7 +2,7 @@ class BookService {
 
     constructor() {
 	// API route, you can use the literal route
-	this.URI =  'http://localhost:3000/api/books';
+	this.URI =  '/api/books';
     }
 
     // CRUD Methods for our api

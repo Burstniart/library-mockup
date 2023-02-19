@@ -174,3 +174,7 @@ To also delete files while deleteing records from the db go to the routes file a
 
 To prevent webpack from acting up whenever we do something the webpack config file has a mode variable, now we switch that variable to production cause we set webpack to only bundle files whenever mode is production and not development, which was the value we;ve been working with this whole time.
 
+Remove the localhost addres fromt the files as we prepare to upload to our hosting service
+Add post install command to package.json
+
+When isntalling app give db access to host service.
