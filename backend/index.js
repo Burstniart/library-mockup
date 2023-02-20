@@ -1,5 +1,7 @@
 if (process.env.NODE_ENV == 'development') {
     require('dotenv').config(); // mainly a dev tool, not a production tool
+} else {
+    require('dotenv').config(); // mainly a dev tool, not a production tool
 }
 
 const express = require('express'); // Create a server 

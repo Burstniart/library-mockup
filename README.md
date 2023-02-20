@@ -178,3 +178,7 @@ Remove the localhost addres fromt the files as we prepare to upload to our hosti
 Add post install command to package.json
 
 When isntalling app give db access to host service.
+
+Final congiguration for render set up
+Build command : npm install && npm run build
+Start command: npm run start
